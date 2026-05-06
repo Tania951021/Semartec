@@ -1,0 +1,304 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Semartec</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- NAVBAR con HIPERVÍNCULOS y ANCLAS -->
+    <nav class="navbar navbar-expand-lg navbar-semartec fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+                <img src="./static/media/logo.png" alt="Logo Semartec" style="height:40px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse justify-content-end" id="menu">
+            <ul class="navbar-nav">
+                <li class="nav-item text-white"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item text-white"><a class="nav-link" href="#nosotros">Sobre nosotros</a></li>
+                <li class="nav-item text-white"><a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item text-white"><a class="nav-link" href="#galeria">Galería</a></li>
+                <li class="nav-item text-white"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INICIO -->
+    <section id="inicio" class="container mt-5 pt-5">
+        <div class="row align-items-center">
+            <!-- IZQUIERDA: VIDEO -->
+            <div class="col-md-4">
+                <video controls class="w-100 rounded shadow video-semartec">
+                    <source src="./static/media/Semartec.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- DERECHA: TITULO ANIMADO -->
+            <div class="col-md-8 hero-bienvenida">
+                <h1 class="falling-text">
+                    <span style="--i:1">B</span><span style="--i:2">i</span><span style="--i:3">e</span>
+                    <span style="--i:4">n</span><span style="--i:5">v</span><span style="--i:6">e</span>
+                    <span style="--i:7">n</span><span style="--i:8">i</span><span style="--i:9">d</span>
+                    <span style="--i:10">o</span><span style="--i:11">s</span><br><span style="--i:12">a</span>
+                    <br><span style="--i:13">S</span><span style="--i:14">e</span>
+                    <span style="--i:15">m</span><span style="--i:16">a</span><span style="--i:17">r</span><span style="--i:18">t</span>
+                    <span style="--i:19">e</span><span style="--i:20">c</span>
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros" class="container mt-5">
+        <h2 class="text-center text-warning display-4 fw-bold mb-4">Sobre Nosotros</h2>
+        <div class="row align-items-center">
+            <!-- PÁRRAFO -->
+            <div class="col-12 col-md-6">
+                <p class="fs-5 text-justify">
+                    Semartec, A.C. Somos un grupo de jóvenes con conocimientos tecnológicos y muchas ganas de transformar nuestras comunidades Mazahuas constituidos legalmente desde el año 2013. Nos unimos al ver las necesidades que hay en las comunidades indígenas y rurales del Municipio de San José del Rincón, principalmente porque el nivel educativo en zonas marginadas es bajo y una de las causas es el limitado uso de la tecnología.
+                </p>
+            </div>
+            <!-- MAPA -->
+            <div class="col-12 col-md-6 text-center">
+                <div class="map-responsive">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.1030723706817!2d-100.15664122579979!3d19.665607533200433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2935295555555%3A0xf3cca8c320193eb7!2sSemartec%2C%20A.C.!5e0!3m2!1ses-419!2smx!4v1777942527121!5m2!1ses-419!2smx"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <section class="container mt-5">
+        <div class="row align-items-stretch g-4">
+            <!-- Misión -->
+            <div class="col-12 col-md-6">
+                <div class="p-4 h-100 border rounded shadow-sm">
+                    <h2 class="text-center text-uppercase titulo-naranja">Misión</h2>
+                    <p class="mt-3 text-justify">
+                        Mejorar la calidad de la educación en niñas, niños y jóvenes por medio de las TICs y capacitación
+                        para contribuir al desarrollo comunitario de la zona noroeste del Estado de México.
+                    </p>
+                </div>
+            </div>
+            <!-- Visión -->
+            <div class="col-12 col-md-6">
+                <div class="p-4 h-100 border rounded shadow-sm">
+                    <h2 class="text-center text-uppercase titulo-naranja">Visión</h2>
+                    <p class="mt-3 text-justify">
+                        Ser una asociación civil consolidada, empoderando a las comunidades con mejores oportunidades
+                        de desarrollo, logrando un mejor nivel educativo con el uso de herramientas tecnológicas.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICIOS con TABLA -->
+    <section id="servicios" class="container mt-5">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Servicio</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Internet</td>
+                    <td>Servicio de internet a escuelas u hogares, en diferentes planes y tarifas</td>
+                </tr>
+                <tr>
+                    <td>Equipo de computo</td>
+                    <td>Equipos de computo para escritorio o laptop, dependiendo al ususrio y sus necesidades.</td>
+                </tr>
+                <tr>
+                    <td>Instalación</td>
+                    <td>Se realizan las instalación completa para poder adquirir el paquete de internet de preferencia.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- CLIENTES -->
+    <section class="container mt-5">
+        <h2 class="titulo-convenios">Convenios</h2>
+        <div class="row text-center lista-convenios">
+            <div class="col-12 col-md-3 mb-3">
+                <a class="c1" href="https://www.facebook.com/GponTelecomsadecv/" target="_blank">Gpon</a>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <a class="c2" href="https://www.facebook.com/p/COSMO-FIBRA-100089744543904/" target="_blank">Cosmo Fibra</a>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <a class="c3" href="https://www.facebook.com/wimaxmexico/?locale=es_LA" target="_blank">Wimax México</a>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+                <a class="c4" href="https://summalink.mx/" target="_blank">Summalink</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="container mt-5">
+        <h2 class="titulo-galeria">Galería</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <img src="static/media/1.jpg" class="galeria-img" alt="">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="static/media/2.jpg" class="galeria-img" alt="">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="static/media/3.jpg" class="galeria-img" alt="">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="static/media/4.jpg" class="galeria-img" alt="">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="static/media/5.jpg" class="galeria-img" alt="">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="static/media/6.jpg" class="galeria-img" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="container mt-5">
+        <!-- TESTIMONIOS -->
+        <div class="row g-5 align-items-stretch">
+            <div class="col-12 col-lg-6">
+                <h2 class="titulo-testimonios">Testimonios</h2>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="testimonio-card">
+                            <p class="testimonio-texto">
+                                "El acompañamiento y la capacitación tecnológica transformaron nuestra forma de aprender."
+                            </p>
+                        <div class="testimonio-autor">— Comunidad beneficiada</div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="testimonio-card">
+                        <p class="testimonio-texto">
+                            "Semartec llevó tecnología a lugares donde nunca había llegado."
+                        </p>
+                        <div class="testimonio-autor">— Docente rural</div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="testimonio-card">
+                        <p class="testimonio-texto">
+                            "Gracias a Semartec, nuestros jóvenes ahora tienen nuevas oportunidades."
+                        </p>
+                        <div class="testimonio-autor">— Padre de familia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FORMULARIO-->
+        <div class="col-12 col-lg-6 d-flex">
+            <div class="form-card my-auto w-100">
+                <h2 class="titulo-contacto text-center">Formulario de contacto</h2>
+                <form id="formContacto" action="/contacto/" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <input type="text" name="nombre" placeholder="Nombre completo" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" name="correo" placeholder="Correo electrónico" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje" class="form-control" required></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-enviar" type="submit">Enviar mensaje</button>
+                        <div id="msgEstado" class="mt-3"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- REDES -->
+    <footer class="footer-semartec text-center p-4 mt-5">
+        <div class="mb-3">
+            <a href="https://www.facebook.com/semartecac" target="_blank" class="red-social">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/semartecac" target="_blank" class="red-social">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCIJhsN3NoO4MYxEJZ3Ufiuw" target="_blank" class="red-social">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://semartec.org/" target="_blank" class="red-social">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p class="mb-0">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalPrivacidad" class="text-decoration-none">
+                Aviso de privacidad
+            </a>
+            | @Derechos reservados
+        </p>
+    </footer>
+
+    <div class="modal fade" id="modalPrivacidad" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><strong>Aviso de Privacidad – Semartec A.C.</strong></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" style="text-align: justify;">
+                    <p>
+                        En cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares,
+                        Semartec A.C. informa que los datos personales recabados a través de este sitio web
+                        serán utilizados únicamente para fines de contacto, registro y seguimiento de
+                        nuestros servicios, cursos y actividades.
+                    </p>
+                    <p>
+                        Usted puede ejercer sus derechos ARCO enviando un correo a:
+                        <strong>presidencia@semartec.org</strong>.
+                    </p>
+                    <p>
+                        Sus datos no serán compartidos con terceros sin su consentimiento,
+                        salvo las excepciones previstas por la ley.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
