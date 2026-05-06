@@ -1,0 +1,218 @@
+
+/* Fondo degradado naranja → amarillo */
+.navbar-semartec{
+  background: linear-gradient(90deg, #ff7a00, #ffb300);
+}
+
+/* Color de marca (Semartec) rosa/vino */
+.navbar-semartec .navbar-brand{
+  color: #b01257 !important;   /* vino */
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+/* Links rosa */
+.navbar-semartec .nav-link{
+  color: #e91e63 !important;   /* rosa */
+  font-weight: 700;
+}
+
+/* Hover vino */
+.navbar-semartec .nav-link:hover{
+  color: #7a0c3a !important;   /* vino oscuro */
+}
+
+/* Ícono del menú (hamburger) visible sobre fondo claro */
+.navbar-semartec .navbar-toggler{
+  border-color: rgba(0,0,0,.2);
+}
+.navbar-semartec .navbar-toggler-icon{
+  filter: invert(1);
+}
+
+.video-semartec{
+    width:100%;
+    max-height:520px;   /* baja la altura aquí */
+    object-fit:cover;   /* mantiene proporción sin deformar */
+    border-radius:12px;
+}
+.hero-bienvenida{
+    background: linear-gradient(90deg,#ff8c00,#ffd200);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    border-radius:12px;
+    min-height:320px;
+}
+
+.falling-text{
+    text-align:center;
+    line-height:1.2;
+}
+
+.falling-text span{
+    display:inline-block;
+    font-size:5rem;
+    font-weight:900;
+    color:#7a004b;
+    opacity:0;
+    transform:translateY(-120px);
+    animation:fall 0.6s forwards ease-out;
+    animation-delay:calc(var(--i)*0.08s);
+}
+
+@keyframes fall{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.titulo-naranja {
+  color: #ff7a00;   /* naranja */
+  font-weight: 700; /* negritas */
+}
+
+
+.titulo-convenios{
+  font-size: 2.2rem;
+  color: #7b1e3a;           
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* tipografía distinta para enlaces */
+.lista-convenios a{
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* colores por elemento */
+.c1{ color: #1f6feb; } 
+.c2{ color: #f1c40f; } 
+.c3{ color:#27ae60; }  
+.c4{ color:#f39c12; }  
+
+.lista-convenios a:hover{
+  text-decoration: underline;
+}
+.titulo-galeria{
+  font-size: 2.2rem;
+  color: #df6b8e;          
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+.galeria-img{
+  width: 100%;
+  height: 220px;        
+  object-fit: cover;    
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.testimonio-card{
+  background:#ffffff;
+  border-radius:12px;
+  padding:25px;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+  height:100%;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.testimonio-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+.testimonio-texto{
+  font-style:italic;
+  font-size:1.05rem;
+  margin-bottom:15px;
+}
+.testimonio-autor{
+  font-weight:700;
+  color:#ff7a00; /* naranja institucional */
+  text-align:right;
+}
+.titulo-testimonios{
+  text-align:center;
+  font-size:2rem;
+  font-weight:800;
+  margin-bottom:30px;
+}
+
+.titulo-contacto{
+  text-align:center;
+  font-size:2rem;
+  font-weight:800;
+  color:#1f4e79;          /* azul elegante */
+  margin-bottom:25px;
+  letter-spacing:.5px;
+}
+
+.form-card{
+  background:#ffffff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(0,0,0,.12);
+}
+
+.btn-enviar{
+  background:#ff7a00;
+  border:none;
+  font-weight:700;
+}
+.btn-enviar:hover{
+  background:#e56d00;
+}
+
+.footer-semartec{
+    background: linear-gradient(90deg,#ff8c00,#ffd200);
+    color:#7a004b;
+}
+
+.footer-semartec p{
+    color:#7a004b;
+    font-weight:600;
+}
+
+.red-social{
+    color:#7a004b;
+    font-size:2rem;
+    margin:0 15px;
+    transition:transform .3s, color .3s;
+}
+
+.red-social:hover{
+    transform:scale(1.2);
+    color:#a0005f;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: #f39c12;
+}
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  max-width:500px;
+  margin:auto;
+}
+
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+section {
+    padding: 90px;
+}
