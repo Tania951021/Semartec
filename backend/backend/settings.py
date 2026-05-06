@@ -13,9 +13,10 @@ SECRET_KEY = 'django-insecure-l*d5@z6clxs%t#=e$-41m(-k5db^obfd@#vcq5-g+^lq2%d1#3
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
-DEBUG = False
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -30,6 +31,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -109,10 +111,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    os.path.join(BASE_DIR, 'static'),  # Esta es la carpeta "static" que ya tienes en tu proyecto
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
