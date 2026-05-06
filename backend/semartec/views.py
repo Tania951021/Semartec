@@ -2,7 +2,10 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.core.mail import send_mail
 from django.conf import settings
+import logging 
 from .models import Contacto
+
+logger = logging.getLogger(__name__)
 
 def inicio(request):
     return render(request, 'index.html')
@@ -16,10 +19,7 @@ def contacto(request):
             mensaje = request.POST.get('mensaje', '').strip()
 
             if not nombre or not correo or not mensaje:
-                return JsonResponse(
-                    {'mensaje': 'Por favor completa todos los campos.'}, 
-                    status=400
-                )
+                return JsonResponse({'mensaje': '❌ Completa todos los campos'}, status=400)
 
             Contacto.objects.create(
                 nombre=nombre,
@@ -27,29 +27,29 @@ def contacto(request):
                 mensaje=mensaje
             )
 
-            asunto = f'Nuevo mensaje de contacto: {nombre}'
+            asunto = f'Nuevo mensaje de: {nombre}'
             cuerpo = f"""
-            Has recibido un nuevo mensaje desde el formulario de la web:
-
             Nombre: {nombre}
             Correo: {correo}
+            
             Mensaje:
             {mensaje}
             """
 
-            # Enviar correo con configuración segura
             send_mail(
                 subject=asunto,
                 message=cuerpo,
                 from_email=settings.EMAIL_HOST_USER,
                 recipient_list=[settings.EMAIL_HOST_USER],
-                fail_silently=False,  
+                fail_silently=False,
             )
 
-            return JsonResponse({'mensaje': '✅ Mensaje enviado correctamente'})
+            return JsonResponse({'mensaje': 'Mensaje enviado correctamente'})
 
         except Exception as e:
-            print("ERROR REAL:", e) 
-            return JsonResponse({'mensaje': f'Error: {str(e)}'}, status=500)
+            error_texto = f"Error: {type(e).__name__} - {str(e)}"
+            logger.error(error_texto)
+            print(error_texto)  
+            return JsonResponse({'mensaje': error_texto}, status=500)
 
-    return JsonResponse({'mensaje': ' Método no permitido'}, status=405)
+    return JsonResponse({'mensaje': 'Método no permitido'}, status=405)
