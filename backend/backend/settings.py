@@ -124,3 +124,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'tania.crz.crz96@gmail.com'
 EMAIL_HOST_PASSWORD = 'szgycuupqhfzoqbw'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
